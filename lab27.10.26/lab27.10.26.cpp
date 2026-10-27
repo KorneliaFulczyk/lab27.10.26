@@ -370,3 +370,18 @@ int main() {
 */
 
 //zadanie 11
+float obwod(float a, float b) {
+	cout << "Podaj bok a: ";
+	cin >> a;
+	cout << "Podaj bok b: ";
+	cin >> b;
+	float o = a + b;
+	cout << "Obwod wynosi " << o << endl;
+	return o;
+}
+int main() {
+	float a=0, b=0;
+	
+	obwod(a, b);
+
+}
