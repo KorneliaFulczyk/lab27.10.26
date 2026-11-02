@@ -369,13 +369,14 @@ int main() {
 }
 */
 
+/*
 //zadanie 11
 float obwod(float a, float b) {
 	cout << "Podaj bok a: ";
 	cin >> a;
 	cout << "Podaj bok b: ";
 	cin >> b;
-	float o = a + b;
+	float o = a + a + b + b;
 	cout << "Obwod wynosi " << o << endl;
 	return o;
 }
@@ -384,4 +385,61 @@ int main() {
 	
 	obwod(a, b);
 
+}
+*/
+
+/*
+//zadanie 12
+void objetosc()
+{
+	int a, b, c;
+	cout << "Podaj krawedzie prostopadloscianu: \n";
+	cin >> a >> b >> c;
+
+	int V = a * b * c;
+	cout << "Objetosc prostopadloscianu wynosi V=" <<V;
+	
+
+}
+
+int main() {
+	objetosc();
+}
+*/
+
+/*
+//zadanie 13
+int potega(int a, int b) {
+	
+
+	int power = a;
+	for (int i = 1; i < b; i++) {
+		
+		power = power * a;
+		//cout << power << " " << a << " " << b << endl;
+		
+	}
+	cout << power;
+	return 0;
+}
+int main() {
+	int a,b;
+	cout << "Co spotegowac podaj a^b. \n";
+	cout << "a="; cin >> a;
+	cout << "b="; cin >> b;
+	potega( a,b);
+}
+*/
+
+//zadanie 14
+int silnia(int n) {
+	int S;
+	
+	while (int i >=0) {
+		S = 1;
+		S = n*n
+
+
+	return S;
+	}
 }
