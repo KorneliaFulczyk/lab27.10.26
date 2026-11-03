@@ -407,39 +407,129 @@ int main() {
 }
 */
 
-/*
-//zadanie 13
-int potega(int a, int b) {
-	
+//============================================================================================================//
+//============================================================================================================//
+#include <math.h>
+#include <cstdlib>
+int potega(int a, int b);
+int silnia(int n);
+int potegaDwojki(int n);
+int potegaDwojki2(int n);
+int losowanieNumerka(int s);
 
-	int power = a;
-	for (int i = 1; i < b; i++) {
-		
-		power = power * a;
-		//cout << power << " " << a << " " << b << endl;
-		
-	}
-	cout << power;
-	return 0;
-}
 int main() {
+	srand(time(NULL));
+	//zadanie 13
+	/*
 	int a,b;
 	cout << "Co spotegowac podaj a^b. \n";
 	cout << "a="; cin >> a;
 	cout << "b="; cin >> b;
 	potega( a,b);
-}
-*/
+	*/
 
-//zadanie 14
-int silnia(int n) {
-	int S;
+
+
+	//zadanie 14
+	/*
+	int n = 0;
+	cout << "Podaj n: ";
+	cin >> n;
+
+	int wynik = silnia(n);
+	cout << endl << "Wynik: " << wynik;
+	*/
+
+	//zadanie 15
+	/*
+	int n = 0;
+	potegaDwojki(n);
+
+	*/
+
 	
-	while (int i >=0) {
-		S = 1;
-		S = n*n
+	//zadanie 16
+	/*
+	int n = 0;
+	cout << potegaDwojki2(n);
+	*/
+
+	//zadanie 16
+	/*
+		int s = 0;
+		losowanieNumerka(s);
+	*/
 
 
-	return S;
+}
+
+int potega(int a, int b) {
+
+
+	int power = a;
+	for (int i = 1; i < b; i++) {
+
+		power = power * a;
+		//cout << power << " " << a << " " << b << endl;
+
 	}
+	cout << power;
+	return 0;
+}
+
+
+
+int silnia(int n) {
+	int S=n;
+	
+	for (int i = n-1; i >= 1;i--) {
+		
+		S = S * i;
+	}
+	return S;
+	
+}
+
+int potegaDwojki(int n) {
+	cout << "Podaj n: ";
+	cin >> n;
+	int DwaDoN = 2;
+	for (int i = 0; i <= n-2;i++)
+		DwaDoN = DwaDoN * 2;
+
+	cout << "wynik: " << DwaDoN;
+	return DwaDoN;
+}
+
+int potegaDwojki2(int n) {
+	cout << "Podaj n: ";
+	cin >> n;
+	return pow(2, n);
+	
+
+}
+
+int losowanieNumerka(int s) {
+	s = -1;
+	while (s < 0 || s>10) {
+		cout << "Podaj szczesliwy numerek: ";
+		cin >> s;
+	}
+	
+	int licznik = 0;
+	for (int i = 0; i < 10; i++) {
+		int l = rand() % 9 + 1;
+	
+		
+		if (s == l)
+			licznik++;
+	}
+	float procent = licznik;
+	procent *= 10;
+	
+	
+		cout << "Twoj numer wylosowano " << licznik << " razy." << endl;
+		cout << "To stanowi " << procent << "% losowan." << endl;
+
+		return 0;
 }
